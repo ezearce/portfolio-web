@@ -1,0 +1,35 @@
+.footer {
+  padding: 1.75rem 1.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.copy {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+}
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  color: var(--text-soft);
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.links a:hover { color: var(--text); background: var(--bg-elevated); }

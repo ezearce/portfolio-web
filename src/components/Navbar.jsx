@@ -5,8 +5,6 @@ import styles from '@/styles/Navbar.module.css'
 
 const LINKS = [
   { id: 'services', label: 'Servicios' },
-  { id: 'projects', label: 'Proyectos' },
-  { id: 'contact',  label: 'Contacto' },
 ]
 
 function scrollTo(id) {
@@ -57,7 +55,8 @@ export default function Navbar() {
           className={styles.brand}
           onClick={(e) => { e.preventDefault(); scrollTo('hero'); setOpen(false) }}
         >
-          Ezequiel Arce
+          <span className={styles.brandName}>Esear</span>
+          <span className={styles.brandSuffix}>Studio</span>
         </a>
 
         <nav className={`${styles.nav} ${open ? styles.open : ''}`}>

@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <span className={styles.copy}>
-          © {new Date().getFullYear()} Ezequiel Arce
+          © {new Date().getFullYear()} Esear Studio
         </span>
         <div className={styles.links}>
           <a href="https://github.com/ezearce" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

@@ -28,25 +28,25 @@
 /* Brand */
 .brand {
   display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-weight: 500;
-  font-size: 0.95rem;
-  color: var(--text);
+  align-items: baseline;
+  gap: 0.4rem;
   white-space: nowrap;
   flex-shrink: 0;
 }
-.brandDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--green);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 25%, transparent);
-  animation: pulse 2.4s ease-in-out infinite;
+.brandName {
+  font-family: var(--font-display), serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
-@keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 25%, transparent); }
-  50%       { box-shadow: 0 0 0 5px color-mix(in srgb, var(--green) 10%, transparent); }
+.brandSuffix {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
 }
 
 /* Nav links */

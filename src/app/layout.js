@@ -23,24 +23,23 @@ const caveat = Caveat({
 })
 
 export const metadata = {
-  title: 'Ezequiel Arce — Full-Stack Developer',
+  title: 'Esear Studio — Software que resuelve problemas reales',
   description:
-    'Desarrollo aplicaciones web y móviles para empresas y emprendedores. React, Next.js, Laravel, React Native, Flutter.',
+    'Desarrollamos aplicaciones web, apps móviles y sistemas a medida para negocios y emprendedores.',
   keywords: [
-    'desarrollador full-stack',
-    'react',
-    'next.js',
-    'laravel',
-    'react native',
-    'flutter',
-    'freelance argentina',
+    'esear studio',
+    'desarrollo de software',
     'desarrollo web',
-    'desarrollo mobile',
+    'apps móviles',
+    'sistemas a medida',
+    'e-commerce',
+    'automatizaciones',
+    'software argentina',
   ],
-  authors: [{ name: 'Ezequiel Arce' }],
+  authors: [{ name: 'Esear Studio' }],
   openGraph: {
-    title: 'Ezequiel Arce — Full-Stack Developer',
-    description: 'Desarrollo aplicaciones web y móviles para empresas y emprendedores.',
+    title: 'Esear Studio — Software que resuelve problemas reales',
+    description: 'Desarrollamos aplicaciones web, apps móviles y sistemas a medida para negocios y emprendedores.',
     type: 'website',
     locale: 'es_AR',
   },

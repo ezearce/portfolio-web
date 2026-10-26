@@ -1,10 +1,12 @@
 'use client'
 import { useRef, useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import useInView from '@/lib/useInView'
 import styles from '@/styles/Contact.module.css'
+
+const WHATSAPP_URL = 'https://wa.me/5492920248803'
 
 export default function Contact() {
   const [headRef, headVisible] = useInView()
@@ -52,6 +54,18 @@ export default function Contact() {
             </a>
 
             <div className={styles.socials}>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.social}
+              >
+                <FaWhatsapp size={18} />
+                <div>
+                  <span className={styles.socialName}>WhatsApp</span>
+                  <span className={styles.socialHandle}>Escribinos directo</span>
+                </div>
+              </a>
               <a
                 href="https://www.linkedin.com/in/ezequiel-arce-4457371b7/"
                 target="_blank"

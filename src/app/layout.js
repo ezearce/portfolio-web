@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${playfair.variable} ${inter.variable} ${caveat.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         <Providers>
           <SmoothScroll />
           <Navbar />

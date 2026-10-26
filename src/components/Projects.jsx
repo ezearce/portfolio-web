@@ -43,7 +43,7 @@ const PROJECTS = [
     title: 'Tienda online',
     desc: 'Comercio electrónico completo con carrito de compras y pagos por Mercado Pago. El cliente compra en pocos clics y el dueño gestiona productos, pedidos, stock y usuarios desde un panel de administración. Lleva un negocio a vender online sin necesidad de plataformas de terceros.',
     image: '/assets/ecommerce.png',
-    url: 'https://arce-diz-js.vercel.app/',
+    url: null,
     repo: null,
   },
   {
@@ -52,7 +52,7 @@ const PROJECTS = [
     desc: 'Sistema para que un negocio administre productos, ventas y stock desde una sola pantalla. Registra cada operación, actualiza el inventario de forma automática y evita los errores del control manual. Pensado para llevar orden y datos confiables del día a día.',
     image: '/assets/supermarket.png',
     url: null,
-    repo: 'https://github.com/ezearce/GestionVentas',
+    repo: null,
   },
 ]
 
@@ -111,12 +111,6 @@ export default function Projects() {
           {PROJECTS.map((p, i) => (
             <ProjectCard key={p.index} project={p} reverse={i % 2 !== 0} />
           ))}
-        </div>
-
-        <div className={styles.github}>
-          <Link href="https://github.com/ezearce" target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
-            <FiGithub size={15} /> Ver más en GitHub
-          </Link>
         </div>
       </div>
     </section>

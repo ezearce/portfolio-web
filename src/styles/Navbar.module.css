@@ -101,6 +101,21 @@
 .themeBtn:hover { color: var(--text); background: var(--bg-elevated); }
 .themeBtn svg { width: 18px; height: 18px; }
 
+.whatsapp {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #25d366;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+.whatsapp:hover {
+  background: color-mix(in srgb, #25d366 14%, transparent);
+  transform: translateY(-1px);
+}
+
 /* Hamburger */
 .burger {
   display: none;

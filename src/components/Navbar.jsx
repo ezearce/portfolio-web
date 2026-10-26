@@ -1,7 +1,10 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
+import { FaWhatsapp } from 'react-icons/fa'
 import styles from '@/styles/Navbar.module.css'
+
+const WHATSAPP_URL = 'https://wa.me/5492920248803'
 
 const LINKS = [
   { id: 'services', label: 'Servicios' },
@@ -76,6 +79,16 @@ export default function Navbar() {
         </nav>
 
         <div className={styles.right}>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.whatsapp}
+            aria-label="Escribinos por WhatsApp"
+          >
+            <FaWhatsapp size={18} />
+          </a>
+
           <button
             className={styles.themeBtn}
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

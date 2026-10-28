@@ -23,23 +23,24 @@ const caveat = Caveat({
 })
 
 export const metadata = {
-  title: 'Esear Studio — Software que resuelve problemas reales',
+  title: 'Bahía Webs — Páginas web, apps y sistemas a medida',
   description:
-    'Desarrollamos aplicaciones web, apps móviles y sistemas a medida para negocios y emprendedores.',
+    'Desarrollamos páginas web, apps móviles y sistemas a medida para negocios y emprendedores. Bahía Blanca y todo el país.',
   keywords: [
-    'esear studio',
-    'desarrollo de software',
+    'bahia webs',
+    'páginas web',
     'desarrollo web',
+    'diseño web bahía blanca',
     'apps móviles',
     'sistemas a medida',
     'e-commerce',
-    'automatizaciones',
+    'tienda online',
     'software argentina',
   ],
-  authors: [{ name: 'Esear Studio' }],
+  authors: [{ name: 'Bahía Webs' }],
   openGraph: {
-    title: 'Esear Studio — Software que resuelve problemas reales',
-    description: 'Desarrollamos aplicaciones web, apps móviles y sistemas a medida para negocios y emprendedores.',
+    title: 'Bahía Webs — Páginas web, apps y sistemas a medida',
+    description: 'Desarrollamos páginas web, apps móviles y sistemas a medida para negocios y emprendedores. Bahía Blanca y todo el país.',
     type: 'website',
     locale: 'es_AR',
   },

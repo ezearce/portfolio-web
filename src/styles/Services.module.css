@@ -38,6 +38,8 @@
 
 /* Row */
 .row {
+  --row-accent: var(--accent);
+  position: relative;
   display: grid;
   grid-template-columns: 3.5rem 1fr auto;
   gap: 0 2rem;
@@ -47,23 +49,45 @@
   cursor: default;
   border-left: 2px solid transparent;
   transition:
-    background 0.3s ease,
-    border-left-color 0.3s ease,
-    padding-left 0.3s ease;
+    background 0.35s ease,
+    border-left-color 0.35s ease,
+    padding-left 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
 }
+/* Alternating brand colors for more visual rhythm */
+.row:nth-child(even) { --row-accent: var(--green); }
+
 .row:hover {
-  background: color-mix(in srgb, var(--bg-card) 60%, transparent);
-  border-left-color: var(--accent);
-  padding-left: 1rem;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--row-accent) 12%, transparent),
+    color-mix(in srgb, var(--bg-card) 55%, transparent) 55%
+  );
+  border-left-color: var(--row-accent);
+  padding-left: 1.1rem;
+  box-shadow: 0 10px 30px -14px color-mix(in srgb, var(--row-accent) 45%, transparent);
 }
 
 .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 999px;
   font-family: var(--font-display), serif;
-  font-size: 0.85rem;
-  color: var(--text-soft);
-  letter-spacing: 0.05em;
-  padding-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--row-accent);
+  letter-spacing: 0.03em;
   align-self: flex-start;
+  border: 1px solid color-mix(in srgb, var(--row-accent) 35%, transparent);
+  background: color-mix(in srgb, var(--row-accent) 8%, transparent);
+  transition: color 0.35s ease, background 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.row:hover .num {
+  color: #faf8f3;
+  background: var(--row-accent);
+  transform: scale(1.1) rotate(-4deg);
 }
 
 .body {
@@ -80,7 +104,7 @@
   color: var(--text);
   transition: color 0.3s, transform 0.3s;
 }
-.row:hover .rowTitle { color: var(--accent); }
+.row:hover .rowTitle { color: var(--row-accent); }
 
 .rowDesc {
   font-size: 0.92rem;
@@ -91,9 +115,9 @@
 
 .arrow {
   font-size: 1.25rem;
-  color: var(--accent);
+  color: var(--row-accent);
   flex-shrink: 0;
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, color 0.35s ease;
 }
 
 @media (max-width: 640px) {

@@ -101,7 +101,7 @@ export default function Projects() {
       <div className={styles.inner}>
         <div ref={headRef} className={`${styles.head} reveal ${headVisible ? 'show' : ''}`}>
           <span className={styles.eyebrow}>~ proyectos ~</span>
-          <h2 className={styles.title}>Trabajos en producción.</h2>
+          <h2 className={styles.title}>Últimos trabajos.</h2>
           <p className={styles.subtitle}>
             Proyectos que desarrollé de principio a fin y que hoy están en uso real.
           </p>

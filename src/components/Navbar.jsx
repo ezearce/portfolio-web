@@ -58,8 +58,8 @@ export default function Navbar() {
           className={styles.brand}
           onClick={(e) => { e.preventDefault(); scrollTo('hero'); setOpen(false) }}
         >
-          <span className={styles.brandName}>Esear</span>
-          <span className={styles.brandSuffix}>Studio</span>
+          <span className={styles.brandName}>Bahía</span>
+          <span className={styles.brandSuffix}>Webs</span>
         </a>
 
         <nav className={`${styles.nav} ${open ? styles.open : ''}`}>

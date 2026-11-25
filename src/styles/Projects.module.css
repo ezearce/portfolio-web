@@ -38,11 +38,25 @@
   line-height: 1.7;
 }
 
-/* Project list */
-.list {
+/* Carousel */
+.carousel { outline: none; }
+.carousel:focus-visible { outline: 2px solid var(--accent); outline-offset: 8px; border-radius: var(--radius); }
+
+.viewport {
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.track {
   display: flex;
-  flex-direction: column;
-  gap: 5rem;
+  cursor: grab;
+}
+.track:active { cursor: grabbing; }
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 0.25rem;
 }
 
 /* Card */
@@ -51,19 +65,71 @@
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
   align-items: center;
+  user-select: none;
 }
-.card.reverse {
-  direction: rtl;
-}
-.card.reverse > * { direction: ltr; }
 
 @media (max-width: 768px) {
-  .card,
-  .card.reverse {
+  .card {
     grid-template-columns: 1fr;
-    direction: ltr;
     gap: 1.75rem;
   }
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.counter {
+  font-family: var(--font-display), serif;
+  font-size: 1rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  min-width: 4.5rem;
+}
+.counter strong { color: var(--text); font-weight: 400; font-size: 1.35rem; }
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--border-strong);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s;
+}
+.dot:hover { background: var(--text-muted); }
+.dotActive { width: 1.75rem; background: var(--accent); }
+.dotActive:hover { background: var(--accent); }
+
+.arrows { display: flex; gap: 0.6rem; }
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.arrow:hover { background: var(--accent); border-color: var(--accent); color: #faf8f3; transform: translateY(-2px); }
+
+@media (max-width: 600px) {
+  .counter { display: none; }
+  .controls { margin-top: 2rem; }
 }
 
 /* Image */
